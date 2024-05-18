@@ -4,7 +4,7 @@
 using namespace std;
 
 
-Usuario::Usuario(char* dni, char* nombre, char* apellido, char* email, int telefono, char* user, char* contra, char* genero, char* fechaNcto, int numTarjeta, int puntos){
+Usuario::Usuario(char* dni, char* nombre, char* apellido, char* email, int telefono, char* user, char* contra, char* genero, char* fechaNcto, int numTarjeta){
 	strcpy(this->dni, dni);
 	strcpy(this->nombre, nombre);
 	strcpy(this->apellido, apellido);
@@ -16,7 +16,6 @@ Usuario::Usuario(char* dni, char* nombre, char* apellido, char* email, int telef
 	this->fechaNcto = new char(strlen(fechaNcto) + 1);
 	strcpy(this->fechaNcto, fechaNcto);
 	this->numTarjeta = numTarjeta;
-	this->puntos = puntos;
 }
 
 Usuario::Usuario(){
@@ -31,7 +30,6 @@ Usuario::Usuario(){
 	this->fechaNcto = new char(strlen("") + 1);
 	strcpy(this->fechaNcto, "");
 	this->numTarjeta = 0;
-	this->puntos = 0;
 }
 
 Usuario::Usuario(Usuario &otro){
@@ -46,7 +44,6 @@ Usuario::Usuario(Usuario &otro){
 	this->fechaNcto = new char(strlen(otro.fechaNcto) + 1);
 	strcpy(this->fechaNcto, otro.fechaNcto);
 	this->numTarjeta = otro.numTarjeta;
-	this->puntos = otro.puntos;
 }
 
 Usuario::~Usuario(){
@@ -92,14 +89,6 @@ char* Usuario::getFechaNcto(){
 
 int Usuario::getNumTarjeta(){
 	return this->numTarjeta;
-}
-
-int Usuario::getPuntos(){
-	return this->puntos;
-}
-
-void Usuario::setPuntos(int puntos){
-	this->puntos = puntos;
 }
 
 void Usuario::setApellido(char* apellido){
