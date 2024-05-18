@@ -13,10 +13,10 @@ private:
 	char genero[2];
 	char* fechaNcto;
 	int numTarjeta;
-	int puntos;
+
 
 public:
-	Usuario(char* dni, char* nombre, char* apellido, char* email, int telefono, char* user, char* contra, char* genero, char* fechaNcto, int numTarjeta, int puntos);
+	Usuario(char* dni, char* nombre, char* apellido, char* email, int telefono, char* user, char* contra, char* genero, char* fechaNcto, int numTarjeta, );
 	Usuario();
 	Usuario(Usuario &u);
 	~Usuario();
@@ -31,9 +31,7 @@ public:
 	char* getGenero();
 	char* getFechaNcto();
 	int getNumTarjeta();
-	int getPuntos();
 
-	void setPuntos(int puntos);
 	void setDNI(char* dni);
 	void setNombre(char* nombre);
 	void setApellido(char* apellido);
