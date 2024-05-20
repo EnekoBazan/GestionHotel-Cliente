@@ -35,3 +35,54 @@ habitacion::habitacion(const habitacion &h)
 	strcpy(this->estado, h.estado);
 }
 
+int habitacion::getId(){
+	return this->id;
+}
+
+char* habitacion::getTipo(){
+	char* resultado = new char(strlen(this->tipo) + 1);
+	strcpy(resultado, this->tipo);
+	return resultado;
+}
+
+int habitacion::getCapacidad(){
+	return this->capacidad;
+}
+
+float habitacion::getPrecio(){
+	return this->precio;
+}
+
+char* habitacion::getEstado(){
+	char* resultado = new char(strlen(this->estado) + 1);
+	strcpy(resultado, this->estado);
+	return resultado;
+}
+
+void habitacion::getId(int id){
+	this->id = id;
+}
+
+void habitacion::getTipo(char* tipo){
+	this->tipo = new char(strlen(tipo) + 1);
+	strcpy(this->tipo, tipo);
+}
+
+void habitacion::getCapacidad(int capacidad){
+	this->capacidad = capacidad;
+}
+
+void habitacion::getPrecio(float precio){
+	this->precio = precio;
+}
+
+void habitacion::getEstado(char* estado){
+	this->estado = new char(strlen(estado) + 1);
+	strcpy(this->estado, estado);
+}
+
+habitacion::~habitacion() {
+	delete[] this->tipo;
+	delete[] this->estado;
+}
+
