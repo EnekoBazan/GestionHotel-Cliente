@@ -1,18 +1,21 @@
 #ifndef CLASES_PROVINCIA_H_
 #define CLASES_PROVINCIA_H_
 
-class Provincia {
+class Ciudad {
 private:
 	int id;
 	char* nombre;
+	int numHoteles;
 public:
-	Provincia(int id, const char* nombre);
-	virtual ~Provincia();
+	Ciudad(int id, const char* nombre, int numHoteles);
+	virtual ~Ciudad();
 	const char* getNombre();
 	int getId();
+	int getNumHoteles();
 	void setNombre(char*);
 	void setId(int);
-	void imprimirProvincia();
+	void setNumHoteles(int);
+	void imprimirCiudad();
 
 };
 

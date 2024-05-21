@@ -2,7 +2,8 @@
 #define CLASES_HOTEL_H_
 
 #include <string.h>
-#include "Provincia.h"
+
+#include "Ciudad.h"
 
 class Hotel {
 private:
